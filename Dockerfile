@@ -15,7 +15,7 @@ RUN git clone https://github.com/economiagovbr/FastETL.git /tmp/repo-FastETL && 
     mkdir -p /opt/airflow/plugins/FastETL/hooks && \
     mkdir -p /opt/airflow/plugins/FastETL/custom_functions/utils && \
     cp /tmp/repo-FastETL/hooks/dou_hook.py /opt/airflow/plugins/FastETL/hooks/dou_hook.py && \
-    cp -r /tmp/repo-FastETL/custom_functions/utils/* /opt/airflow/plugins/FastETL/custom_functions/utils/
+    cp -r /tmp/repo-FastETL/custom_functions/utils/date.py /opt/airflow/plugins/FastETL/custom_functions/utils/date.py
 
 # Remove Git and clean up package cache
 RUN apt-get remove -y git && \
